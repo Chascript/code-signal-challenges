@@ -42,6 +42,5 @@ function palindromeRearranging(inputString) {
         }
     }
     // if more than one odd
-    if(oddCount.length > 1) return false
-    return true
+    return oddCount.length <= 1
 }
