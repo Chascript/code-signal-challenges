@@ -34,13 +34,13 @@ function palindromeRearranging(inputString) {
     })
     // need to get just values which are odd 
     // loop breaks if count2 has more than 1 odd value
-    const oddCount = []
+    let oddCount = 0
     for(const prop in tally){
-        if(oddCount.length > 1)break;
+        if(oddCount > 1)break;
         if(tally[prop] % 2 === 1){
-            oddCount.push(tally[prop])
+            oddCount++
         }
     }
     // if more than one odd
-    return oddCount.length <= 1
+    return oddCount <= 1
 }
