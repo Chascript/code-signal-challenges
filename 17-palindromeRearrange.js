@@ -36,11 +36,11 @@ function palindromeRearranging(inputString) {
     // loop breaks if count2 has more than 1 odd value
     let oddCount = 0
     for(const prop in tally){
-        if(oddCount > 1) break;
         if(tally[prop] % 2 === 1){
             oddCount+=1
+            if(oddCount > 1) return false
         }
     }
     // if more than one odd
-    return oddCount <= 1
+    return true
 }
